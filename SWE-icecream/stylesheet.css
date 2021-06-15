@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap');
 
 :root {
-  --background-color: #f0bce0;
+  --background-color: #ebb9d1ff;
   --box-color-trans: rgb(243, 156, 167, 0.95);
   --box-color-trans-2: rgb(243, 156, 167, 0.8);
   --box-color: rgb(243, 156, 167);
