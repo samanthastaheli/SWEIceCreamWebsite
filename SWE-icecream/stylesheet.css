@@ -1,19 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap');
 
+:root {
+  --background-color: #f0bce0;
+  --box-color-trans: rgb(243, 156, 167, 0.95);
+  --box-color: rgb(243, 156, 167);
+  --black: rgb(32, 32, 32);
+}
+
 body {
     font-family: 'Oswald', sans-serif;
     font-size: 16px;
     margin: auto;
     max-width: 900px;
-    background-color: #f0bce0;
+    color: var(--black);
+    background-color: var(--background-color);
     /* background-color: #d8a7c9; */
     /* background-color: rgba(243, 156, 168, 0.596); */
     /* background-color: #E28D99; */
     text-align: center;
-    
-    /* background-image: url("img/ice-cream.png");
-    background-repeat: no -repeat;
-    background-position: center; */
 }
 
 /* HEADER  */
@@ -39,7 +43,6 @@ body {
 /* CONTENT  */
 main {
     background-image: url("img/ice-cream.png");
-    height: 620px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -49,102 +52,137 @@ main {
     justify-content: center;
 }
 
-.recipe-link {
-    background-color: rgb(243, 156, 167, 0.95);
-    padding: 45px;
-    margin: 50px;
-    font-size: 30px;
+.recipe-box {
+  margin: 50px;
+}
+
+figcaption {
+  font-size: 30px;
 }
 
 .recipe-img {
   width: 80px;
 }
 
-/* .ice-cream-img {
-    /* background-color: #cccccc;
-    height: 500px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative; */
-
-/* main {
-    display: grid;
-    grid-template-columns: 300px, 300px, 300px;
-    grid-template-rows: 100px, 100px, 100px, 100px, 100px;
-    justify-content: center;
+#ice-cream-img {
+  width: 100px;
+  padding-top: 30px;
 }
 
-#icecream-img {
-    grid-column: 2/3;
-    grid-row: 1/5;
+/* FLIP ICE CREAM */
+#ice-box {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  perspective: 1000px; 
+}
+/* This container is needed to position the front and back side */
+#ice-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  font-size: 20px;
+}
+/* Do an horizontal ice when you move the mouse over the ice box container */
+#ice-box:hover #ice-box-inner {
+  transform: rotateY(180deg);
+}
+/* Position the front and back side */
+#ice-box-front, #ice-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+  background-color: var(--box-color-trans);
+}
+/* Style the front side (fallback if image is missing) */
+/* #ice-box-front {
+}
+ */
+/* Style the back side */
+#ice-box-back {
+  background-color: var(--box-color);
+  transform: rotateY(180deg);
 }
 
-.recipe-link {
-    padding: 10px;
-    background-color: blue;
+
+
+
+/* FLIP BROWNIE */
+#brownie-box {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  perspective: 1000px; 
 }
 
-#icecream-link {
-    grid-column: 1/2;
-    grid-row: 3/4;
+#brownie-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  font-size: 20px;
 }
 
-#brownie-link {
-    grid-column: 3/4;
-    grid-row: 3/4;
+#brownie-box:hover #brownie-box-inner {
+  transform: rotateY(180deg);
 }
 
-#cone-link {
-    grid-column: 2/4;
-    grid-row: 5/6;
-} */
-
-
-/* flip img from w3schools */
-.flip-box {
-    background-color: transparent;
-    width: 300px;
-    height: 200px;
-    /* border: 1px solid #f1f1f1; */
-    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+#brownie-box-front, #brownie-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+  background-color: var(--box-color-trans);
 }
 
-  /* This container is needed to position the front and back side */
-  .flip-box-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-    font-size: 20px;
-  }
-  
-  /* Do an horizontal flip when you move the mouse over the flip box container */
-  .flip-box:hover .flip-box-inner {
-    transform: rotateY(180deg);
-  }
-  
-  /* Position the front and back side */
-  .flip-box-front, .flip-box-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden; /* Safari */
-    backface-visibility: hidden;
-    background-color: rgb(243, 156, 167, 0.85);
-    color: black;
-    margin-bottom: 50px;
-  }
-  
-  /* Style the front side (fallback if image is missing) */
-  /* .flip-box-front {
-  }
-   */
-  /* Style the back side */
-  .flip-box-back {
-    background-color: rgb(243, 156, 167);
-    color: rgb(32, 32, 32);
-    transform: rotateY(180deg);
-  }
+#brownie-box-back {
+  background-color: var(--box-color);
+  transform: rotateY(180deg);
+}
+
+
+
+
+/* FLIP CONE */
+#cone-box {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  perspective: 1000px; 
+}
+
+#cone-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  font-size: 20px;
+}
+
+#cone-box:hover #cone-box-inner {
+  transform: rotateY(180deg);
+}
+
+#cone-box-front, #cone-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+  background-color: var(--box-color-trans);
+}
+
+#cone-box-back {
+  background-color: rgb(243, 156, 167);
+  transform: rotateY(180deg);
+}
