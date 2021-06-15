@@ -5,16 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SWE Ice Cream Challenge</title>
     <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="stylesheet-medium.css">
+    <link rel="stylesheet" href="stylesheet-large.css">
 </head>
 <body>
     <header>
-        <h1>Ice Cream</h1>
+        <div id="title">
+            <img id="logo" src="img/ice cream.svg" alt="dessert hub ice cream logo">
+            <h1>DESSERT HUB</h1>
+        </div>
+        <h2 id="subtitle">By Anna Light, Marquis Jackson and Samantha Staheli</h2>
     </header>
-    <main>
-        <img id="icecream-img" width="200px" src="img/ice cream.svg" alt="ice cream drawing">
-            <h3 href="icecream-recipe.html" id="icecream-link">Ice Cream</h3>
-            <h3 href="brownie-recipe.html" id="brownie-link">Brownies</h3>
-            <h3 href="cone-recipe.html" id="cone-link">Waffle Cone</h3>
+    <main> 
+        <div class="background-img">
+            <div id="recipes" class="flip-box">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <img class="recipe-img" id="ice-cream-img" src="img/scoop.png" alt="brownie">
+                        <figcaption>Ice Cream</figcaption>
+                    </div>
+                    <div class="flip-box-back">
+                        <h4>Ice Cream</h4>
+                    </div>
+                </div>
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <img class="recipe-img" id="brownie-img" src="img/brownie.png" alt="brownie">
+                        <figcaption>Brownies</figcaption>
+                    </div>
+                    <div class="flip-box-back">
+                        <h4>Brownie</h4>
+                    </div>
+                </div>
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <img class="recipe-img" id="cone-img" src="img/brownie.png" alt="brownie">
+                        <figcaption>Waffle Cone</figcaption>
+                    </div>
+                    <div class="flip-box-back">
+                        <h4>Waffle Cone</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <img id="icecream-img" width="280px" src="img/ice-cream.png" alt="ice cream drawing"> -->
+
+                    <!-- <h3 href="icecream-recipe.html" id="icecream-link" class="recipe-link">Ice Cream</h3> -->
+                    <!-- <h3 href="brownie-recipe.html" id="brownie-link" class="recipe-link">Brownies</h3>
+                    <h3 href="cone-recipe.html" id="cone-link" class="recipe-link">Waffle Cone</h3> -->
 
             <!-- link to diff page -->
             <!-- <a href="icecream-recipe.html" id="icecream-link">Ice Cream</a>
