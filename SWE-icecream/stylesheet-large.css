@@ -1,3 +1,83 @@
 @media only screen and (min-width: 60em) {
 
+body {
+    max-width: 1000px;
+    color: var(--black);
+}
+
+#background-img {
+    background-image: url("img/background-600.png");
+  }
+
+.content {
+    display: grid;
+    grid-template-columns: auto 300px auto;
+    grid-template-rows: auto 50px auto;
+    justify-content: center;
+}
+
+#ice-box-front, #brownie-box-front, #cone-box-front {
+    background-color: var(--box-color-trans-2);
+  }
+
+#ice-box {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    margin-right: 10px;
+}
+
+#brownie-box {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    margin-left: 10px;
+}
+
+#cone-box {
+    grid-column: 2/4;
+    grid-row: 5/6;
+    margin: 0px;
+    padding: 0px;
+}
+
+#title {
+    font-size: 25px;
+}
+
+#subtitle {
+  font-size: 22px;
+}
+
+#logo {
+  width: 30px;
+  margin: 10px;
+  transform: rotate(-15deg);
+}
+
+main {
+    background-image: url("img/ice-cream.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    margin-top: 45px;
+    display: flex;
+    justify-content: center;
+}
+
+.recipe-box {
+  margin: 50px;
+}
+
+figcaption {
+  font-size: 30px;
+}
+
+.recipe-img {
+  width: 80px;
+}
+
+#ice-cream-img {
+  width: 100px;
+  padding-top: 30px;
+}
 }

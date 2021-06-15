@@ -3,15 +3,17 @@
 :root {
   --background-color: #f0bce0;
   --box-color-trans: rgb(243, 156, 167, 0.95);
+  --box-color-trans-2: rgb(243, 156, 167, 0.8);
   --box-color: rgb(243, 156, 167);
   --black: rgb(32, 32, 32);
+  --button-color: #ffdd33;
 }
 
 body {
     font-family: 'Oswald', sans-serif;
     font-size: 16px;
     margin: auto;
-    max-width: 900px;
+    max-width: 300px;
     color: var(--black);
     background-color: var(--background-color);
     /* background-color: #d8a7c9; */
@@ -26,12 +28,13 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-bottom: 0;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
 }
 
 #subtitle {
   font-size: 22px;
-  margin-top: 0;
+  margin-top: 0px;
 }
 
 #logo {
@@ -42,14 +45,16 @@ body {
 
 /* CONTENT  */
 main {
-    background-image: url("img/ice-cream.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    margin-top: 45px;
     display: flex;
     justify-content: center;
+}
+
+#background-img {
+  background-image: url("img/background-300.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }
 
 .recipe-box {
@@ -64,9 +69,25 @@ figcaption {
   width: 80px;
 }
 
-#ice-cream-img {
-  width: 100px;
-  padding-top: 30px;
+h4 {
+  font-size: 25px;
+  margin: 5px;
+}
+
+button {
+  background-color: var(--box-color);
+  border: 2px solid var(--button-color);
+  padding: 5px;
+  font-size: 15px;
+}
+
+p {
+  margin: 0px 5px 5px 5px;
+}
+
+
+#ice-box-front, #brownie-box-front, #cone-box-front {
+  background-color: var(--box-color-trans);
 }
 
 /* FLIP ICE CREAM */
@@ -97,19 +118,43 @@ figcaption {
   height: 100%;
   -webkit-backface-visibility: hidden; /* Safari */
   backface-visibility: hidden;
-  background-color: var(--box-color-trans);
 }
-/* Style the front side (fallback if image is missing) */
-/* #ice-box-front {
-}
- */
 /* Style the back side */
 #ice-box-back {
   background-color: var(--box-color);
   transform: rotateY(180deg);
 }
 
+#ice-cream-img {
+  width: 100px;
+  padding-top: 30px;
+}
 
+.ice-type-img {
+  width: 85px;
+}
+
+#ice-recipe {
+  display: grid;
+  grid-template-rows: auto auto auto auto;
+}
+
+#ice-type-img-div {
+  grid-row: 1/2;
+}
+#money-div {
+  grid-row: 2/3;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: var(--box-color);
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+.money-symbol {
+  margin: 0px 35px 0px 25px;
+  font-size: 25px;
+}
 
 
 /* FLIP BROWNIE */
@@ -140,7 +185,6 @@ figcaption {
   height: 100%;
   -webkit-backface-visibility: hidden; /* Safari */
   backface-visibility: hidden;
-  background-color: var(--box-color-trans);
 }
 
 #brownie-box-back {
@@ -179,7 +223,6 @@ figcaption {
   height: 100%;
   -webkit-backface-visibility: hidden; /* Safari */
   backface-visibility: hidden;
-  background-color: var(--box-color-trans);
 }
 
 #cone-box-back {

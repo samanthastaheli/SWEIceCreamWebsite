@@ -2,4 +2,25 @@
     body {
         max-width: 800px;
     }
+    main {
+        display: grid;
+        grid-template-columns: 300px, 300px, 300px;
+        grid-template-rows: 100px, 100px, 100px, 100px, 100px;
+        justify-content: center;
+    }
+    
+    #icecream-box {
+        grid-column: 1/2;
+        grid-row: 3/4;
+    }
+    
+    #brownie-box {
+        grid-column: 3/4;
+        grid-row: 3/4;
+    }
+    
+    #cone-box {
+        grid-column: 2/4;
+        grid-row: 5/6;
+    }
 }
