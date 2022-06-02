@@ -1,2 +1,3 @@
-# projects
-This reposiroy is for side projects done for school, personal, and practice. 
+# SWE Ice Cream Coding Challenge
+
+A website that helps you choose what ice cream flavors and combos you would like.
